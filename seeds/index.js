@@ -2,8 +2,11 @@ const mongoose = require('mongoose');
 const cities = require('./cities');
 const { places, descriptors } = require('./seedHelpers');
 const Campground = require('../models/campground');
+const dbUrl = process.env.DB_URL
 
-mongoose.connect(process.env.DB_URL);
+console.log(process.env);
+mongoose.connect(dbUrl);
+
 
 const db = mongoose.connection;
 
