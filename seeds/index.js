@@ -3,7 +3,7 @@ const cities = require('./cities');
 const { places, descriptors } = require('./seedHelpers');
 const Campground = require('../models/campground');
 
-mongoose.connect(dbUrl);
+mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
 
